@@ -1,0 +1,47 @@
+---
+const { title, body } = Astro.props;
+---
+
+<article class="hero-section bg-cover bg-center bg-no-repeat">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <nav class="relative text-center text-white font-semibold py-5">
+        <p
+            data-aos="zoom-in"
+            class="hover:scale-90 transition-transform duration-300 md:text-5xl text-4xl"
+        >
+            <a href="/">{title}</a>
+        </p>
+    </nav>
+    <section
+        data-aos="zoom-in"
+        class="relative flex flex-col justify-center items-center h-96 my-32 text-white"
+    >
+        <p
+            class="md:text-7xl text-5xl text-center hover:scale-90 font-bold transition-transform duration-300"
+        >
+            {body}
+        </p>
+        <article class="my-10 hover:scale-90 transition-all duration-300">
+            <a
+                id="ver-precios"
+                class="border p-3 rounded hover:bg-white hover:text-black transition-all text-xl font-semibold"
+                href="javascript:void(0)">Ver Precios</a
+            >
+        </article>
+    </section>
+</article>
+
+<style>
+    .hero-section {
+        background-image: url("/public/fondo.jpg");
+        height: 100vh;
+    }
+</style>
+
+<script>
+    document.getElementById("ver-precios").addEventListener("click", () => {
+        document
+            .getElementById("precios")
+            .scrollIntoView({ behavior: "smooth" });
+    });
+</script>

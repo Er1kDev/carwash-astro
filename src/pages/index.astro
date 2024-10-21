@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+import Servicios from "../components/Servicios.astro";
+import Precios from "../components/Precios.astro";
+import ButtonBackToTop from "../components/ButtonBackToTop.astro";
+import "animate.css";
+import "aos/dist/aos.css";
+import WhatsappButton from "../components/WhatsappButton.astro";
+import Footer from "../components/Footer.astro";
+
+const servicios = {
+	servicios: [
+		{
+			title: "LAVADO FULL INCLUYE",
+			descripcion: "",
+		},
+		{
+			descripcion: "INTERIOR COMPLETO + SILICONA",
+		},
+		{
+			descripcion: "EXTERIOR COMPLETO + RENOVADOR",
+		},
+	],
+};
+---
+
+<Layout title="CarWash Black">
+	<main class="">
+		<NavBar title="CarWash Black" body="Lavado de Automóviles" />
+		<Servicios title="Servicios" servicios={servicios.servicios} />
+		<Precios />
+	</main>
+	<Footer />
+	<ButtonBackToTop />
+	<WhatsappButton />
+
+	<style>
+		main {
+		}
+	</style>
+
+	<script>
+		import AOS from "aos";
+		AOS.init();
+
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 2000) {
+				backToTop.classList.remove("opacity-0", "pointer-events-none");
+				backToTop.classList.add("opacity-100", "pointer-events-auto");
+			} else {
+				backToTop.classList.remove(
+					"opacity-100",
+					"pointer-events-auto",
+				);
+				backToTop.classList.add("opacity-0", "pointer-events-none");
+			}
+		});
+
+		const backToTop = document.getElementById("back-to-top");
+		backToTop.addEventListener("click", () => {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth",
+			});
+		});
+	</script>
+</Layout>

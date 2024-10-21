@@ -1,0 +1,18 @@
+---
+import Redes from "./Redes.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="text-white text-center py-16">
+    <section>
+        <section class="flex flex-row justify-center py-3">
+            <Redes />
+        </section>
+        <section>
+            <p class="text-xl">
+                Desarrollado por Er1kDev ©{currentYear}
+            </p>
+        </section>
+    </section>
+</footer>

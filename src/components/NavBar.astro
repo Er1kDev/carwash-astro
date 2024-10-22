@@ -2,39 +2,58 @@
 const { title, body } = Astro.props;
 ---
 
-<article class="hero-section bg-cover bg-center bg-no-repeat">
-    <div class="absolute inset-0 bg-black opacity-60"></div>
-    <nav class="relative text-center text-white font-semibold py-5">
+<article class="bg-gray-600 hero-section">
+    <nav class="text-center text-white font-semibold py-5">
         <p
-            data-aos="zoom-in"
-            class="hover:scale-90 transition-transform duration-300 md:text-5xl text-4xl"
+            class="hover:scale-90 transition-transform duration-300 md:text-4xl text-3xl"
         >
-            <a href="/">{title}</a>
+            <a class="drop-shadow-2xl" href="/">{title}</a>
         </p>
     </nav>
     <section
-        data-aos="zoom-in"
-        class="relative flex flex-col justify-center items-center md:pt-64 pt-24 text-white"
+        class="flex flex-col text-center justify-center items-center h-screen"
     >
-        <p
-            class="md:text-7xl text-5xl text-center hover:scale-90 font-bold transition-transform duration-300"
-        >
-            {body}
-        </p>
-        <article class="my-10 hover:scale-90 transition-all duration-300">
-            <a
-                id="ver-precios"
-                class="border p-3 rounded hover:bg-white hover:text-black transition-all text-xl font-semibold"
-                href="javascript:void(0)">Ver Precios</a
+        <div class="py-4">
+            <h1
+                class="lg:text-7xl md:text-5xl drop-shadow-2xl text-5xl text-white font-semibold hover:scale-90 transition-all hover:rotate-2 duration-300"
             >
-        </article>
+                {body}
+            </h1>
+        </div>
+        <div
+            class="bg-black hover:bg-red-500 py-1 px-3 rounded-full text-white hover:scale-90 hover:rotate-2 transition-all duration-300"
+        >
+            <span class="text-lg"> "¡Vive rápido, lava limpio!"</span>
+        </div>
+        <button
+            id="ver-precios"
+            class="bg-black hover:bg-red-500 hover:scale-90 transition-all text-white text-xl py-2 px-3 mt-5 rounded"
+        >
+            Ver Precios
+        </button>
     </section>
 </article>
 
 <style>
     .hero-section {
+        position: relative;
         background-image: url("/public/fondo.webp");
-        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .hero-section > * {
+        position: relative;
+        z-index: 2;
     }
 </style>
 

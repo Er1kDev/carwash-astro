@@ -3,34 +3,42 @@ const { title, body } = Astro.props;
 ---
 
 <article class="bg-gray-600 hero-section">
-    <nav class="text-center text-white font-semibold py-5">
-        <p
-            class="hover:scale-90 transition-transform duration-300 md:text-4xl text-3xl"
-        >
-            <a class="drop-shadow-2xl" href="/">{title}</a>
-        </p>
-    </nav>
     <section
         class="flex flex-col text-center justify-center items-center h-screen"
     >
-        <div class="py-4">
+        <nav
+            class="text-center text-white font-semibold py-5 animate__animated animate__fadeInDown"
+        >
+            <p
+                class="hover:scale-90 hover:rotate-2 transition-transform duration-300 md:text-8xl text-6xl drop-shadow-md"
+            >
+                {title}
+            </p>
+        </nav>
+        <div class="py-4 animate__animated animate__fadeInDown">
             <h1
                 class="lg:text-7xl md:text-5xl drop-shadow-2xl text-5xl text-white font-semibold hover:scale-90 transition-all hover:rotate-2 duration-300"
             >
                 {body}
             </h1>
         </div>
-        <div
-            class="bg-black hover:bg-red-500 py-1 px-3 rounded-full text-white hover:scale-90 hover:rotate-2 transition-all duration-300"
-        >
-            <span class="text-lg"> "¡Vive rápido, lava limpio!"</span>
+        <div class="animate__animated animate__fadeInDown pt-5">
+            <div
+                class="bg-black hover:bg-red-500 py-1 shadow-md px-3 rounded-full text-white hover:scale-90 hover:rotate-2 transition-all duration-300"
+            >
+                <span class="md:text-2xl text-lg drop">
+                    "¡Vive rápido, lava limpio!"</span
+                >
+            </div>
         </div>
-        <button
-            id="ver-precios"
-            class="bg-black hover:bg-red-500 hover:scale-90 transition-all text-white text-xl py-2 px-3 mt-5 rounded"
-        >
-            Ver Precios
-        </button>
+        <div class="animate__animated animate__fadeInDown pt-5">
+            <button
+                id="ver-precios"
+                class="bg-black hover:bg-red-500 hover:scale-90 transition-all text-white text-xl py-2 px-3 mt-5 rounded shadow-xl"
+            >
+                Ver Precios
+            </button>
+        </div>
     </section>
 </article>
 

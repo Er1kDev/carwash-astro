@@ -8,12 +8,12 @@ import "animate.css";
 import "aos/dist/aos.css";
 import WhatsappButton from "../components/WhatsappButton.astro";
 import Footer from "../components/Footer.astro";
+import Horarios from "../components/Horarios.astro";
 
 const servicios = {
 	servicios: [
 		{
 			title: "LAVADO FULL INCLUYE",
-			descripcion: "",
 		},
 		{
 			descripcion: "INTERIOR COMPLETO + SILICONA",
@@ -29,6 +29,7 @@ const servicios = {
 	<main>
 		<NavBar title="CarWash Black" body="Lavado de Automóviles" />
 		<Servicios title="Servicios" servicios={servicios.servicios} />
+		<Horarios />
 		<Precios />
 	</main>
 	<Footer />
@@ -45,7 +46,7 @@ const servicios = {
 		AOS.init();
 
 		window.addEventListener("scroll", () => {
-			if (window.scrollY > 2000) {
+			if (window.scrollY > 300) {
 				backToTop.classList.remove("opacity-0", "pointer-events-none");
 				backToTop.classList.add("opacity-100", "pointer-events-auto");
 			} else {

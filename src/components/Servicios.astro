@@ -3,14 +3,21 @@ const { title, servicios } = Astro.props;
 ---
 
 <section class="flex flex-col text-center bg-black text-white py-10">
-    <h3 class="md:text-6xl text-4xl" data-aos="zoom-in">
+    <h3
+        class="md:text-5xl text-4xl tracking-widest uppercase"
+        data-aos="zoom-in"
+    >
         {title}
     </h3>
     {
         servicios.map((servicio) => (
             <article class="pt-3" data-aos="zoom-in">
-                <p class="md:text-4xl text-2xl pb-2">{servicio.title}</p>
-                <p class="md:text-3xl text-xl">{servicio.descripcion}</p>
+                <p class="md:text-4xl text-2xl pb-2 font-semibold text-red-500 to-red-700">
+                    {servicio.title}
+                </p>
+                <p class="md:text-3xl text-xl italic text-white">
+                    {servicio.descripcion}
+                </p>
             </article>
         ))
     }

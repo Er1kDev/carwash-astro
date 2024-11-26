@@ -7,7 +7,8 @@ const { title, body } = Astro.props;
         class="flex flex-col text-center justify-center items-center h-screen"
     >
         <nav
-            class="text-center text-white font-semibold py-5 animate__animated animate__fadeInDown"
+            class="text-center text-white font-semibold py-5"
+            data-aos="fade-down"
         >
             <p
                 class="hover:scale-95 hover:rotate-3 transition-transform duration-500 md:text-8xl text-6xl drop-shadow-md"
@@ -15,14 +16,14 @@ const { title, body } = Astro.props;
                 {title}
             </p>
         </nav>
-        <div class="py-4 animate__animated animate__fadeInDown">
+        <div class="py-4" data-aos="fade-down">
             <h1
                 class="lg:text-7xl md:text-5xl drop-shadow-2xl text-5xl text-white font-semibold hover:scale-95 transition-all hover:rotate-3 duration-500"
             >
                 {body}
             </h1>
         </div>
-        <div class="animate__animated animate__fadeInDown pt-5">
+        <div class="pt-5" data-aos="fade-down">
             <div
                 class="bg-gradient-to-r from-red-400 to-red-800 py-2 shadow-lg px-5 rounded-full text-white hover:scale-95 hover:rotate-1 transition-transform duration-300"
             >
@@ -31,7 +32,7 @@ const { title, body } = Astro.props;
                 </span>
             </div>
         </div>
-        <div class="animate__animated animate__fadeInDown pt-5">
+        <div class="pt-5" data-aos="fade-down">
             <button
                 id="ver-precios"
                 class="bg-black hover:bg-red-500 hover:scale-90 transition-all text-white text-xl py-2 px-3 mt-5 rounded shadow-xl uppercase"
@@ -51,7 +52,7 @@ const { title, body } = Astro.props;
 <style>
     .hero-section {
         position: relative;
-        background-image: url("/public/fondo.webp");
+        background-image: url("/fondo.webp");
         background-size: cover;
         background-position: center;
     }

@@ -2,7 +2,7 @@
 const { title, body } = Astro.props;
 ---
 
-<article class="bg-gray-600 hero-section">
+<article class="bg-black hero-section">
     <section
         class="flex flex-col text-center justify-center items-center h-screen"
     >
@@ -12,8 +12,7 @@ const { title, body } = Astro.props;
         >
             <p
                 class="md:text-8xl text-6xl bg-clip-text hover:scale-95 tracking-wide hover:rotate-1 transition-transform duration-500 drop-shadow-2xl"
-            
-            > 
+            >
                 {title}
             </p>
         </nav>
@@ -22,7 +21,7 @@ const { title, body } = Astro.props;
                 class="lg:text-6xl md:text-5xl text-5xl tracking-wide drop-shadow-2xl text-gray-200 font-semibold hover:scale-95 transition-all hover:rotate-1 duration-500"
             >
                 {body}
-            <p/>
+            </p>
         </div>
         <div class="pt-5" data-aos="fade-down">
             <div
@@ -57,7 +56,6 @@ const { title, body } = Astro.props;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        
     }
     .hero-section::before {
         content: "";

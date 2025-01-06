@@ -8,19 +8,63 @@
 >
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="26"
-        height="26"
+        width="24"
+        height="24"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="4"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left arrow-narrow-left"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M5 12l14 0"></path><path d="M5 12l4 4"></path><path
+            d="M5 12l4 -4"></path></svg
     >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 5l0 14"></path>
-        <path d="M18 11l-6 -6"></path>
-        <path d="M6 11l6 -6"></path>
-    </svg>
 </button>
+
+<script>
+    const backToTop = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+        // Detectar si estamos al final de la página
+        const isBottom =
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight;
+
+        if (window.scrollY > 800) {
+            backToTop.classList.remove("opacity-0", "pointer-events-none");
+            backToTop.classList.add("opacity-100", "pointer-events-auto");
+
+            // Rotar 90 grados si estamos al final de la página
+            if (isBottom) {
+                backToTop.style.transform = "rotate(90deg)";
+            } else {
+                backToTop.style.transform = "rotate(0deg)";
+            }
+        } else {
+            backToTop.classList.remove("opacity-100", "pointer-events-auto");
+            backToTop.classList.add("opacity-0", "pointer-events-none");
+        }
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+
+        // Animación al hacer clic
+        backToTop.style.transform = "rotate(90deg)";
+        setTimeout(() => {
+            backToTop.style.transform = "rotate(0deg)";
+        }, 300);
+    });
+    backToTop.addEventListener("mouseenter", () => {
+        backToTop.style.transform = "rotate(90deg)";
+    });
+
+    backToTop.addEventListener("mouseleave", () => {
+        backToTop.style.transform = "rotate(0deg)";
+    });
+</script>

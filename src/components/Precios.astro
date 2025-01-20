@@ -1,17 +1,21 @@
 ---
-
+import { Image } from "astro:assets";
+import moticletas from "../img/motocicletas.webp";
+import automovil from "../img/automovil.webp";
+import furgon from "../img/furgon.webp";
+import suvJeep from "../img/suv-jeep.webp";
+import jeep from "../img/jeep.webp";
+import camionetas from "../img/camionetas.webp";
 ---
 
 <section id="precios">
     <div class="flex flex-wrap justify-center items-center text-white">
         <div class="grid grid-cols-1 md:grid-cols-2 w-full vignette">
-            <img
-                src="/motocicletas.webp"
+            <Image
+                src={moticletas}
                 alt="motocicleta"
-                class="w-full h-auto md:order-first
-                order-last"
+                class="w-full h-auto md:order-first order-last"
                 data-aos="zoom-in"
-                loading="lazy"
             />
             <div
                 class="flex flex-col justify-center items-center md:order-last order-first py-3"
@@ -32,12 +36,11 @@
     </div>
     <div class="flex flex-wrap justify-center items-center text-white">
         <div class="grid grid-cols-1 md:grid-cols-2 w-full">
-            <img
-                src="/automovil.webp"
+            <Image
+                src={automovil}
                 alt="automovil"
                 class="w-full h-auto md:order-last order-last"
                 data-aos="zoom-in"
-                loading="lazy"
             />
             <div
                 class="flex flex-col justify-center items-center py-3"
@@ -58,11 +61,10 @@
     </div>
     <div class="flex flex-wrap justify-center items-center text-white">
         <div class="grid grid-cols-1 md:grid-cols-2 w-full">
-            <img
-                src="/furgon.webp"
+            <Image
+                src={furgon}
                 alt="furgon"
                 class="w-full h-auto md:order-first order-last"
-                loading="lazy"
                 data-aos="zoom-in"
             />
             <div
@@ -84,11 +86,10 @@
     </div>
     <div class="flex flex-wrap justify-center items-center text-white">
         <div class="grid grid-cols-1 md:grid-cols-2 w-full">
-            <img
-                src="/suv-jeep.webp"
-                alt="sub o jeep"
-                class="w-full h-full object-cover md:order-last order-last"
-                loading="lazy"
+            <Image
+                src={suvJeep}
+                alt="suvjeep"
+                class="w-full h-auto md:order-last order-last"
                 data-aos="zoom-in"
             />
             <div
@@ -110,11 +111,10 @@
     </div>
     <div class="flex flex-wrap justify-center items-center text-white">
         <div class="grid grid-cols-1 md:grid-cols-2 w-full">
-            <img
-                src="/jeep.webp"
-                alt="camionetas"
+            <Image
+                src={jeep}
+                alt="jeep"
                 class="w-full h-auto md:order-first order-last"
-                loading="lazy"
                 data-aos="zoom-in"
             />
             <div
@@ -136,11 +136,10 @@
     </div>
     <div class="flex flex-wrap justify-center items-center text-white">
         <div class="grid grid-cols-1 md:grid-cols-2 w-full">
-            <img
-                src="/camionetas.webp"
+            <Image
+                src={camionetas}
                 alt="camionetasxl"
                 class="w-full h-auto md:order-last order-last"
-                loading="lazy"
                 data-aos="zoom-in"
             />
             <div

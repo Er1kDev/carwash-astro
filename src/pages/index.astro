@@ -27,8 +27,16 @@ const servicios = {
 
 <Layout title="CarWash Black">
 	<main>
-		<NavBar title="CarWash Black" body="Lavado de Automóviles" />
-		<Servicios title="Servicios" servicios={servicios.servicios} />
+		<NavBar
+			client:load
+			title="CarWash Black"
+			body="Lavado de Automóviles"
+		/>
+		<Servicios
+			client:load
+			title="Servicios"
+			servicios={servicios.servicios}
+		/>
 		<Horarios />
 		<Precios />
 	</main>

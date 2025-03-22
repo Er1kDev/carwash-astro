@@ -11,43 +11,35 @@ import Footer from "../components/Footer.astro";
 import Horarios from "../components/Horarios.astro";
 
 const servicios = {
-	servicios: [
-		{
-			title: "LAVADO FULL INCLUYE",
-		},
-		{
-			descripcion: "INTERIOR COMPLETO + SILICONA",
-		},
-		{
-			descripcion: "EXTERIOR COMPLETO + RENOVADOR",
-		},
-	],
+  servicios: [
+    {
+      title: "LAVADO FULL INCLUYE",
+    },
+    {
+      descripcion: "INTERIOR COMPLETO + SILICONA",
+    },
+    {
+      descripcion: "EXTERIOR COMPLETO + RENOVADOR",
+    },
+  ],
 };
 ---
 
 <Layout title="CarWash Black">
-	<main>
-		<NavBar
-			client:load
-			title="CarWash Black"
-			body="Lavado de Automóviles"
-		/>
-		<Servicios
-			client:load
-			title="Servicios"
-			servicios={servicios.servicios}
-		/>
-		<Horarios />
-		<Precios />
-	</main>
-	<Footer />
-	<ButtonBackToTop />
-	<WhatsappButton />
+  <main>
+    <NavBar title="CarWash Black" body="Lavado de Automóviles" />
+    <Servicios title="Servicios" servicios={servicios.servicios} />
+    <Horarios />
+    <Precios />
+  </main>
+  <Footer />
+  <ButtonBackToTop />
+  <WhatsappButton />
 
-	<script>
-		import AOS from "aos";
-		AOS.init();
-	</script>
+  <script>
+    import AOS from "aos";
+    AOS.init();
+  </script>
 </Layout>
 
 <style></style>
